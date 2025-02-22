@@ -80,3 +80,28 @@ result = 10 / 2 / 2 * 2  # (Left to right)
 # 2.5 * 2
 # 5.0
 print(result)  # 5.0
+
+# short-circuit evaluation
+
+x = 10
+y = 50
+
+result = x != 10 and y == 50  # False and (condition skipped) # No
+print(result)
+
+result = x == 10 or y == 50 or x > 5 or y < 50  # True or True  # True
+print(result)
+
+# Operator Precedence (Order Of Execution)
+# 1) ()
+# 2) **
+# 3) * //, /, %
+# 4) + , -
+# 5) > , <, >=, <=, !=
+# 6) not
+# 7) and
+# 8) or
+
+exp1 = 2 * 2 - 4 - 2 * 2 * -1
+# 4 - 4 + 4
+print(exp1)
